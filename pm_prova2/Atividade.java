@@ -11,18 +11,18 @@ package pm_prova2;
 public abstract class Atividade {
 
     private String nome;
+    private String horario;
     private int duracaoAula;
     private int quantidadeMaximaParticipantes;
     private double valorMensal;
     private StatusAtividade status;
 
-    public Atividade(String nome,
-                     int duracaoAula,
-                     int quantidadeMaximaParticipantes,
-                     double valorMensal,
-                     StatusAtividade status) {
+    
 
+    public Atividade(String nome, String horario, int duracaoAula, int quantidadeMaximaParticipantes,
+            double valorMensal, StatusAtividade status) {
         this.nome = nome;
+        this.horario = horario;
         this.duracaoAula = duracaoAula;
         this.quantidadeMaximaParticipantes = quantidadeMaximaParticipantes;
         this.valorMensal = valorMensal;
@@ -72,5 +72,14 @@ public abstract class Atividade {
     public abstract void exibirDetalhes();
 
     public abstract boolean atividadeColetiva();
+    
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
 }
    

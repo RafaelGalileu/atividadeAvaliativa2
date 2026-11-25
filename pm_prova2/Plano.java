@@ -15,15 +15,16 @@ public abstract class Plano {
     private int quantidadeMaximaAtividades;
     private StatusPlano status;
 
-    public Plano(String nome,
-                 double valorMensal,
-                 int quantidadeMaximaAtividades,
-                 StatusPlano status) {
+    
 
+    
+
+    public Plano(String nome, double valorMensal, int quantidadeMaximaAtividades, StatusPlano status) {
         this.nome = nome;
         this.valorMensal = valorMensal;
         this.quantidadeMaximaAtividades = quantidadeMaximaAtividades;
         this.status = status;
+        
     }
 
     public String getNome() {
@@ -61,5 +62,8 @@ public abstract class Plano {
     public abstract void exibirDetalhes();
 
     public abstract boolean permiteAtividadeColetiva();
+
+    public abstract void associarAtividades (Atividade atividade);
+
 }
    
